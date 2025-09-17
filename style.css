@@ -1,0 +1,483 @@
+/*Impostazioni base della pagina*/
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    background-color: rgb(68, 68, 68);
+     font-family:Helvetica, Arial, sans-serif;
+}
+
+main{
+    margin: 50px 50px 20px;
+}
+
+
+
+
+
+/*Navibar - Posizione in alto fissa, stile e animazione iniziale*/
+.navibar{
+    background-color: rgb(201, 0, 0);
+    padding: 13px 20px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width:96%;
+    border-radius: 15px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: NavibarExpansion 2s ease forwards;
+    z-index: 1000;
+    height: 50px;
+}
+
+/*Stile Link della Navibar - Lista centrata, bottono personalizzati e cliccabili*/
+.navibar ul{
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 200px;
+    margin: 0;
+    padding: 0px;
+}
+
+.navibar a{
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding:15px;
+    text-align: center;
+    
+    
+    
+}
+
+.navi-button{
+    background-color: rgb(250, 250, 250);
+    border-radius: 20px;
+    color: rgb(165, 0, 0);
+    font-size: 25px;
+    width: 120px;
+}
+
+/*Effeti hover e attivo sui tasti della navibar per dare feedback all'utente*/
+.navi-button:hover{
+    background-color: rgb(201, 201, 201);
+}
+
+.navi-button:active{
+    background-color: rgb(159, 159, 159);
+}
+
+/*Cambia il colore della prima lettera*/
+.navi-button .first{
+    color: black;
+}
+
+/*Logo e il suo posizionamento*/
+.logo{
+    height: 50px;
+}
+
+.info-logo{
+    height: 50px;
+    position: absolute;
+    right: 15px;
+    top: 13px;
+}
+
+
+
+/* Animazioni per la comparsa della barra di navigazione e altri oggetti dell'header*/
+@keyframes NavibarExpansion{
+    from{
+        transform: translateX(-50%) scaleX(0);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(-50%) scaleX(1);
+        opacity: 1;
+    }
+}
+
+@keyframes LeftSlide{
+    from{transform: translateX(-300%);}
+
+}
+
+@keyframes RightSlide{
+    from{transform: translateX(300%);}
+
+}
+
+@keyframes DownSlide{
+    0% {top: 0;}
+    100% {top: 30%;}
+}
+
+/*Header - Immagine di sfondo e testi introduttivi*/
+header{
+    background-image: url(Immagini/NutellaSfondo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 1000px;
+    position: relative;
+}
+
+/*Personalizzazione del Testo - Posizione, grandezza, colore, animazione*/
+.head-text{
+    position: absolute;
+    font-size: 1.4rem;
+    top: 200px;
+    padding-left: 50px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(52, 52, 52);
+    width: 800px;
+    max-width: 80vw;
+    overflow-wrap: break-word;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    animation:LeftSlide 1.5s ease forwards;
+}
+
+/*Sezione del tasto "Maggiori Informazioni" con animazione dell'icona che scende in loop*/
+.downscroll{
+    position: absolute;
+    font-size: 1.4rem;
+    text-align: right;
+    bottom: 100px;
+    right: 0px;
+    padding-right: 23px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(52, 52, 52);
+    width: 300px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    animation:RightSlide 1.5s ease forwards;
+}
+
+.downscroll a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.arrow-down{
+    height: 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    animation: DownSlide 2s linear infinite;
+}
+
+
+
+
+/*Sezioni - Sfondo, contenuti, testo. Separati per gestire facilmente lo stile di ogni parte*/
+
+/*Sezione Energia - immagine di sfondo e relative dimensioni e posizioni*/
+.section2{
+    background-image: url(Immagini/Energia.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 700px;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* Box di Testo Energia - posiziona un "banner" con titolo sopra l'immagine di sfondo*/
+.text2{
+    position: absolute;
+    font-size: 1.4rem;
+    top: 280px;
+    padding-left: 50px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(100, 67, 43);
+    width: 500px;
+    max-width: 80vw;
+    overflow-wrap: break-word;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+/*Descrizione Energia - Box bianco con testo descrittivo e margini per separare dalla sezione successiva*/
+.content2{
+    position: relative;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 150px;
+}
+
+/*Logo Energia - Immagine decorativa e la sua posizione*/
+.logo-energia{
+    position: absolute;
+    height: 110px;
+    top: 17px;
+    right: 25px;
+    z-index: 10;
+}
+
+
+
+
+/*Sezione Packaging*/
+.section3{
+    background-image: url(Immagini/pacchi.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 700px;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/*Box di Testo Packaging*/
+.text3{
+    position: absolute;
+    font-size: 1.4rem;
+    top: 280px;
+    right: 0px;
+    padding-left: 50px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(163,127,75);
+    width: 500px;
+    max-width: 80vw;
+    overflow-wrap: break-word;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+/*Descrizione Packaging*/
+.content3{
+    position: relative;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 150px;
+}
+
+/*Logo Eco*/
+.logo-eco{
+    position: absolute;
+    height: 140px;
+    top: 0px;
+    right: 10px;
+    z-index: 10;
+}
+
+
+
+
+
+/*Sezione Cacao*/
+.section4{
+    background-image: url(Immagini/cacao.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 700px;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/*Box di Testo Cacao*/
+.text4{
+    position: absolute;
+    font-size: 1.1rem;
+    top: 280px;
+    left: 0px;
+    padding-left: 50px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(163, 64, 19);
+    width: 500px;
+    max-width: 80vw;
+    overflow-wrap: break-word;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+/*Descrizione Cacao*/
+.content4{
+    position: relative;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 150px;
+}
+
+/*Logo Pianta*/
+.logo-pianta{
+    position: absolute;
+    height: 90px;
+    top: 24px;
+    right: 30px;
+    z-index: 10;
+}
+
+
+.description{
+    font-size: 22px;
+}
+
+
+
+
+/*Sezione Download - contiene le scelte stilistiche, posizionamenti e dropdown menu*/
+/*Area rossa centrale - Dimensioni, bordi, margini, altezza*/
+.download-section{
+    font-size: 2rem;
+    position: relative;
+    padding: 10px 15px;
+    background-color: rgb(201, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin-bottom: 150px;
+    min-height: 200px;
+}
+
+/*Centra il testo*/
+.download-section p{
+    text-align: center;
+}
+
+
+/*Logo Download e Document - Immagini decorative posizionate rispettivamente a destra e a sinistra*/
+
+.logo-download{
+    position: absolute;
+    height: 90px;
+    top: 55px;
+    right: 30px;
+    z-index: 10;
+}
+
+.logo-document{
+    position: absolute;
+    height: 95px;
+    top: 57px;
+    left: 30px;
+    z-index: 10;
+}
+
+/*Contenitore del Pulsante Download - Posizionato al centro in basso con posizione absolute per rimanere fisso*/
+.button-download{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    margin: 10px auto;
+}
+
+/*Pulsante di Download - Stile, colori bordi e cambia il cursore in pointer*/
+.button-download button{
+    background-color: rgb(255, 255, 255);
+    color: rgb(165, 0, 0);
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 10;
+}
+
+/*Stile della Lettera Iniziale - Colore nero*/
+.button-download .first{
+    color: black;
+}
+
+/*Blocchi cliccabili con testo centrato*/
+.button-download a{
+    display: block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 15px;
+    text-align: center;
+    
+}
+
+/*Contenitore che si visualizza solo al passaggio del mouse, position absolute per comparire sempre sotto il pulsante*/
+.download-content{
+    display: none;
+    position: absolute;
+    top: 48px;
+    left: 17px;
+    background-color: rgb(255, 255, 255);
+    min-width: 100px;
+    border-radius: 5px;
+}
+
+/*Cambio colore dei tasti al passaggio/click del mouse per feedback*/
+
+.button-download:hover .download-content{
+    display: block;
+}
+
+.button-download a:hover{
+    background-color: rgb(33, 33, 33);
+    color: rgb(255, 255, 255);
+}
+
+.button-download a:active{
+    background-color: rgb(74, 74, 74);
+    color: rgb(255, 255, 255);
+}
+
+.button-download button:hover{
+    background-color: rgb(195, 195, 195);
+}
+
+
+/*Footer - fine della pagina scuro con testo bianco e link che viene evidenziato al passaggio del mouse*/
+footer{
+    background-color: rgb(21, 21, 21);
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 175px;
+    padding: 0px 10px;
+}
+
+footer p{
+    margin: 15px 0 5px 15px;
+    text-decoration: none;
+}
+
+footer a{
+    text-decoration: none;
+    color: inherit;
+}
+
+footer a:hover {
+    background-color: rgb(69, 69, 69);
+}
+
+/*Nasconde le immagini a dimensioni più piccole per migliorare la leggibilità*/
+@media(max-width: 1520px) {
+    .logo-energia,
+    .logo-eco,
+    .logo-pianta,
+    .logo-download,
+    .logo-document,
+    .logo{
+        display: none;
+    }
+}

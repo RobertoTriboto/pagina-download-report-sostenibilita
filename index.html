@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head> 
+        <!-- Impostazioni base della pagina, imposta titolo e icona della scheda e collega lo stile CSS-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ferrero - Report di Sostenibilità</title>
+        <link rel="stylesheet" href="style.css"> 
+        <link rel="icon" type="image/png" href="Icone/FerreroIcona.png">
+    </head>
+
+
+    <body>
+
+        <!--Header - contiene titolo e testo introduttivi e un pulsante che scorre alla sezione successiva-->
+        <header>    
+            <div class="head-text">
+                <h1>Pagina Report di Sostenibilità Ferrero</h1>  
+                <p>In questa pagina è possibile scaricare i report di sostenibiltà degli ultimi anni</p> 
+            </div>
+            <div class="downscroll">
+                <a href="#sezione2">
+                    <p>Maggiori Informazioni</p> 
+                    <img src="Immagini/down-arrow.png" alt="Freccia verso il basso" class="arrow-down">
+                </a>
+            </div>
+        </header>
+
+
+        <!--Navibar - barra fissa in alto per navigare tra le varie sezioni della pagina-->
+        <nav class="navibar">
+            <img src="Immagini/ScrittaFerrero.png" alt="Logo Ferrero" class="logo">
+            <a href="#footer"><img src="Immagini/info-icon.png" alt="Icona Info" class="info-logo"></a>
+            <ul>
+                <li><a href="index.html" class="navi-button"><span class="first">H</span>ome</a></li>
+                <li><a href="#download" class="navi-button"><span class="first">D</span>ownload</a></li>
+            </ul>
+        </nav>
+
+
+
+        <!--Main - Contiene le sezioni informative e il download-->
+        <main>
+
+            <!-- Sezione Energia - Titolo e immagine come sfondo-->
+            <div id="sezione2" class="section2">
+                <div class="text2">
+                    <h1>Energia Rinnovabile</h1>  
+                </div>
+            </div>
+
+            <!--Contenuto Energia - Descrizione informativa e logo-->
+            <div class="content2">
+                <h1>Energia</h1>
+                <p class="description">Negli stabilimenti globali l'86,6% dell'energia utilizzata proviene da fonti rinnovabili, mentre in Europa è stato già raggiunto il 100%.</p>
+                <img src="Immagini/energia-logo.png" alt="LogoEnergia" class="logo-energia">
+            </div>
+
+
+            <!--Sezione Packaging-->
+            <div class="section3">
+                <div class="text3">
+                    <h1>Packaging Riciclabile</h1>  
+                </div>
+            </div>
+
+            <!--Contenuto Packaging-->
+            <div class="content3">
+                <h1>Packaging</h1>
+                <p class="description">Il 90,7% degli imballaggi è progettato per essere riciclabile, compostabile o riutilizzabile!</p>
+                <img src="Immagini/eco.png" alt="LogoEco" class="logo-eco">
+            </div>
+
+
+            <!--Sezione Cacao-->
+            <div class="section4">
+                <div class="text4">
+                    <h1>Approvigionamento Cacao</h1>  
+                </div>
+            </div>
+
+            <!--Contenuto Cacao-->
+            <div class="content4">
+                <h1>Approvigionamento Cacao</h1>
+                <p class="description">Il 100% delle fave di cacao provengono da coltivazioni certificate secondo standard di sostenibilità riconosciuti e verificati da enti terzi. </p>
+                <img src="Immagini/pianta.png" alt="LogoPianta" class="logo-pianta">
+            </div>
+
+
+            <!--Sezione Download - Contiene dropdown menu che consente di scaricare i PDF dei report -->
+            <div id="download" class="download-section">
+                <p>Area Download dei report per approfondimenti </p>
+                <img src="Immagini/download-icon.png" alt="LogoDownload" class="logo-download">
+                <img src="Immagini/document-icon.png" alt="LogoDocument" class="logo-document">
+                <div class="button-download">
+                    <button><span class="first">D</span>ownload</button>
+                    <div class="download-content">
+                        <a href="ReportFerrero/ReportFerrero2024.pdf" download>2024</a>
+                        <a href="ReportFerrero/ReportFerrero2023.pdf" download>2023</a>
+                        <a href="ReportFerrero/ReportFerrero2022.pdf" download>2022</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer - nome autore, link al sito ufficiale, nome e numero del progetto-->
+        <footer id="footer">
+            <p>Roberto Triboto</p>
+            <p><a href="https://www.ferrero.com/it/it/persone-e-ambiente/rapporti-di-sostenibilita" target="_blank">Sito Ufficiale Ferrero</a></p>
+            <p>Project Work 3,7</p> 
+        </footer>
+    </body>
+</html>
