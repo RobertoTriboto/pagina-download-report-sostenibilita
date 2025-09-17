@@ -17,7 +17,7 @@ main{
 
 
 
-/*Navibar - Posizione in alto fissa, stile e animazione iniziale*/
+/*Navibar - Posizione fissa in alto, stile e animazione iniziale*/
 .navibar{
     background-color: rgb(201, 0, 0);
     padding: 13px 20px;
@@ -34,7 +34,7 @@ main{
     height: 50px;
 }
 
-/*Stile Link della Navibar - Lista centrata, bottono personalizzati e cliccabili*/
+/*Stile Link della Navibar - Lista centrata, pulsanti personalizzati e cliccabili*/
 .navibar ul{
     list-style-type: none;
     overflow: hidden;
@@ -66,7 +66,7 @@ main{
     width: 120px;
 }
 
-/*Effeti hover e attivo sui tasti della navibar per dare feedback all'utente*/
+/*Effetti hover e attivo sui tasti della navibar per dare feedback all'utente*/
 .navi-button:hover{
     background-color: rgb(201, 201, 201);
 }
