@@ -3,6 +3,7 @@ html{
     scroll-behavior: smooth;
 }
 
+/*Body - margin 0 per rimuovere lo spazio predefinito, sfondo grigio scuro, font testi Helvetica, Arial, sans-serif */
 body{
     margin: 0;
     background-color: rgb(68, 68, 68);
@@ -17,7 +18,8 @@ main{
 
 
 
-/*Navibar - Posizione fissa in alto, stile e animazione iniziale*/
+/*Navibar - Posizione fissa in alto (position fixed), sfondo rosso e padding interno,
+bordi arrotondati, elementi allineati con flex e centrati, larghezza quasi totale della pagina, animazione all'apertura*/
 .navibar{
     background-color: rgb(201, 0, 0);
     padding: 13px 20px;
@@ -47,6 +49,7 @@ main{
     padding: 0px;
 }
 
+/*Link navibar senza sottolineatura, testo in grassetto, box cliccabile con testo centrato*/
 .navibar a{
     text-decoration: none;
     font-weight: bold;
@@ -58,6 +61,7 @@ main{
     
 }
 
+/*Pulsanti navibar- sfondo chiaro con testo rosso, bordi arrotondati, dimensione fissa e font più grande*/
 .navi-button{
     background-color: rgb(250, 250, 250);
     border-radius: 20px;
@@ -131,7 +135,7 @@ header{
     position: relative;
 }
 
-/*Personalizzazione del Testo - Posizione, grandezza, colore, animazione*/
+/*Personalizzazione del Testo - Posizione assoluta sopra sfondo, sfondo scuro e testo bianco, larghezza, animazione*/
 .head-text{
     position: absolute;
     font-size: 1.4rem;
@@ -147,7 +151,8 @@ header{
     animation:LeftSlide 1.5s ease forwards;
 }
 
-/*Sezione del tasto "Maggiori Informazioni" con animazione dell'icona che scende in loop*/
+/*Sezione del tasto "Maggiori Informazioni" con freccia - posizione assoluta in basso a destra, testo bianco,
+bordi arrotondati e animazione, link senza sottolineatura con colore dal testo, freccia animata che scende in loop*/
 .downscroll{
     position: absolute;
     font-size: 1.4rem;
@@ -181,7 +186,7 @@ header{
 
 /*Sezioni - Sfondo, contenuti, testo. Separati per gestire facilmente lo stile di ogni parte*/
 
-/*Sezione Energia - immagine di sfondo e relative dimensioni e posizioni*/
+/*Sezione Energia - immagine di sfondo e dimensioni fisse, bordi arrotondati in alto e posizione relativa*/
 .section2{
     background-image: url(Immagini/Energia.png);
     background-repeat: no-repeat;
@@ -193,7 +198,8 @@ header{
     border-top-right-radius: 20px;
 }
 
-/* Box di Testo Energia - posiziona un "banner" con titolo sopra l'immagine di sfondo*/
+/* Box di Testo Energia - posizione assoluta, "banner" con titolo sopra l'immagine di sfondo,
+sfondo marrone e testo bianco, larghezza fissa, bordi arrotondati a destra*/
 .text2{
     position: absolute;
     font-size: 1.4rem;
@@ -337,7 +343,7 @@ header{
 
 
 /*Sezione Download - contiene le scelte stilistiche, posizionamenti e dropdown menu*/
-/*Area rossa centrale - Dimensioni, bordi, margini, altezza*/
+/*Area rossa centrale - Dimensioni, bordi, margine, altezza*/
 .download-section{
     font-size: 2rem;
     position: relative;
@@ -383,7 +389,7 @@ header{
     margin: 10px auto;
 }
 
-/*Pulsante di Download - Stile, colori bordi e cambia il cursore in pointer*/
+/*Pulsante di Download - Sfondo chiaro con testo rosso scuro, bordi arrotondati e cambia il cursore in pointer*/
 .button-download button{
     background-color: rgb(255, 255, 255);
     color: rgb(165, 0, 0);
@@ -411,7 +417,7 @@ header{
     
 }
 
-/*Contenitore che si visualizza solo al passaggio del mouse, position absolute per comparire sempre sotto il pulsante*/
+/*Contenitore visibile solo al passaggio del mouse, position absolute sotto il pulsante, larghezza piccola, bordi arrotondati*/
 .download-content{
     display: none;
     position: absolute;
@@ -443,7 +449,7 @@ header{
 }
 
 
-/*Footer - fine della pagina scuro con testo bianco e link che viene evidenziato al passaggio del mouse*/
+/*Footer - sezione finale della pagina, sfondo scuro con testo bianco e link che viene evidenziato al passaggio del mouse*/
 footer{
     background-color: rgb(21, 21, 21);
     color: rgb(255, 255, 255);
